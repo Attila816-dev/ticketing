@@ -1,0 +1,127 @@
+<mxfile host="65bd71144e">
+    <diagram id="ticketing-components" name="System Components">
+        <mxGraphModel dx="865" dy="1296" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="system-boundary" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingTop=10;spacingLeft=16;fontSize=20;fontStyle=1;strokeColor=#6c8ebf;strokeWidth=2;fillColor=#f8fbff;fillOpacity=35;dashed=1;dashPattern=8 4;" value="Event Ticketing System" vertex="1">
+                    <mxGeometry height="840" width="850" x="390" y="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="customer" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=16;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Customer" vertex="1">
+                    <mxGeometry height="130" width="90" x="55" y="300" as="geometry"/>
+                </mxCell>
+                <mxCell id="manager" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=16;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Event Manager" vertex="1">
+                    <mxGeometry height="130" width="130" x="35" y="635" as="geometry"/>
+                </mxCell>
+                <mxCell id="customer-ui" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=15;spacing=8;" value="Customer Web UI&#xa;Search events&#xa;Check availability&#xa;Manage cart and purchase" vertex="1">
+                    <mxGeometry height="150" width="165" x="205" y="260" as="geometry"/>
+                </mxCell>
+                <mxCell id="manager-ui" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=15;spacing=8;" value="Event Manager Web UI&#xa;Manage events and venues&#xa;Configure manifests and offers" vertex="1">
+                    <mxGeometry height="130" width="165" x="205" y="640" as="geometry"/>
+                </mxCell>
+                <mxCell id="api" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=17;fontStyle=1;spacing=8;" value="ASP.NET Core Web API&#xa;HTTPS / REST endpoints" vertex="1">
+                    <mxGeometry height="95" width="175" x="440" y="440" as="geometry"/>
+                </mxCell>
+                <mxCell id="auth" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=14;spacing=6;" value="Authentication &amp; Authorization&#xa;Identity and role policies" vertex="1">
+                    <mxGeometry height="75" width="220" x="660" y="155" as="geometry"/>
+                </mxCell>
+                <mxCell id="event-services" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=14;spacing=6;" value="Event &amp; Venue Services&#xa;Manifests, offers, prices" vertex="1">
+                    <mxGeometry height="75" width="220" x="660" y="285" as="geometry"/>
+                </mxCell>
+                <mxCell id="sales-services" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=14;spacing=6;" value="Availability &amp; Cart Services&#xa;Seat inventory and reservations" vertex="1">
+                    <mxGeometry height="75" width="220" x="660" y="415" as="geometry"/>
+                </mxCell>
+                <mxCell id="purchase-services" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=14;spacing=6;" value="Purchase &amp; Payment Services&#xa;Order and payment workflow" vertex="1">
+                    <mxGeometry height="75" width="220" x="660" y="545" as="geometry"/>
+                </mxCell>
+                <mxCell id="ticket-services" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=14;spacing=6;" value="Ticket &amp; Cancellation Services&#xa;Issue and cancel tickets" vertex="1">
+                    <mxGeometry height="75" width="220" x="660" y="675" as="geometry"/>
+                </mxCell>
+                <mxCell id="notification-services" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=14;spacing=6;" value="Notification Service&#xa;Ticket and cancellation notices" vertex="1">
+                    <mxGeometry height="75" width="220" x="660" y="805" as="geometry"/>
+                </mxCell>
+                <mxCell id="identity-adapter" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=13;spacing=6;" value="Identity Provider&#xa;Integration" vertex="1">
+                    <mxGeometry height="65" width="170" x="960" y="165" as="geometry"/>
+                </mxCell>
+                <mxCell id="payment-adapter" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=13;spacing=6;" value="Payment Provider&#xa;Integration" vertex="1">
+                    <mxGeometry height="65" width="170" x="960" y="545" as="geometry"/>
+                </mxCell>
+                <mxCell id="notification-adapter" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=13;spacing=6;" value="Email / SMS&#xa;Integration" vertex="1">
+                    <mxGeometry height="65" width="170" x="960" y="805" as="geometry"/>
+                </mxCell>
+                <mxCell id="database" parent="1" style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;spacing=6;align=center;" value="SQL SERVER DATABASE&#xa;Ticketing data (examples)&#xa;&#xa;Event / Venue&#xa;Manifest / Seat&#xa;Offer / Price&#xa;Order / Ticket" vertex="1">
+                    <mxGeometry height="220" width="225" x="930" y="305" as="geometry"/>
+                </mxCell>
+                <mxCell id="identity-provider" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=14;spacing=8;" value="External Identity&#xa;Service" vertex="1">
+                    <mxGeometry height="65" width="165" x="1325" y="165" as="geometry"/>
+                </mxCell>
+                <mxCell id="payment-provider" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=14;spacing=8;" value="External Payment&#xa;Service" vertex="1">
+                    <mxGeometry height="65" width="165" x="1325" y="545" as="geometry"/>
+                </mxCell>
+                <mxCell id="notification-provider" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=14;spacing=8;" value="Email / SMS&#xa;Provider" vertex="1">
+                    <mxGeometry height="65" width="165" x="1325" y="805" as="geometry"/>
+                </mxCell>
+                <mxCell id="customer-ui-edge" edge="1" parent="1" source="customer" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#666666;" target="customer-ui">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="manager-ui-edge" edge="1" parent="1" source="manager" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#666666;" target="manager-ui">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="customer-api-edge" edge="1" parent="1" source="customer-ui" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#666666;fontSize=12;" target="api" value="HTTPS / REST">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="manager-api-edge" edge="1" parent="1" source="manager-ui" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#666666;fontSize=12;" target="api" value="HTTPS / REST">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="api-auth-edge" edge="1" parent="1" source="api" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#666666;" target="auth">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="api-event-edge" edge="1" parent="1" source="api" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#666666;" target="event-services">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="api-sales-edge" edge="1" parent="1" source="api" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#666666;" target="sales-services">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="api-purchase-edge" edge="1" parent="1" source="api" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#666666;" target="purchase-services">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="api-ticket-edge" edge="1" parent="1" source="api" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#666666;" target="ticket-services">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="api-notification-edge" edge="1" parent="1" source="api" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#666666;" target="notification-services">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="auth-identity-edge" edge="1" parent="1" source="auth" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#666666;fontSize=12;" target="identity-adapter" value="Sign-in">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="identity-provider-edge" edge="1" parent="1" source="identity-adapter" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#b85450;fontSize=12;" target="identity-provider" value="Authenticate">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="purchase-payment-edge" edge="1" parent="1" source="purchase-services" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#666666;" target="payment-adapter">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="payment-provider-edge" edge="1" parent="1" source="payment-adapter" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#b85450;fontSize=12;" target="payment-provider" value="Check payment, then charge">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="notification-adapter-edge" edge="1" parent="1" source="notification-services" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#666666;" target="notification-adapter">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="notification-provider-edge" edge="1" parent="1" source="notification-adapter" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#b85450;fontSize=12;" target="notification-provider" value="Send notice">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="event-db-edge" edge="1" parent="1" source="event-services" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;startArrow=none;strokeColor=#6c8ebf;dashed=1;" target="database">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="sales-db-edge" edge="1" parent="1" source="sales-services" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;startArrow=none;strokeColor=#6c8ebf;dashed=1;" target="database">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="purchase-db-edge" edge="1" parent="1" source="purchase-services" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;startArrow=none;strokeColor=#6c8ebf;dashed=1;" target="database">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="ticket-db-edge" edge="1" parent="1" source="ticket-services" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;startArrow=none;strokeColor=#6c8ebf;dashed=1;" target="database">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

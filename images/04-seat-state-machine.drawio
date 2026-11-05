@@ -1,0 +1,64 @@
+<mxfile host="app.diagrams.net" modified="2026-11-05T14:58:00.000Z" agent="Copilot" version="24.7.17" type="device">
+  <diagram id="seat-state-machine" name="Seat State Machine">
+    <mxGraphModel dx="1100" dy="650" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="650" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <mxCell id="title" value="Seat State Machine" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;fontStyle=1;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="350" y="35" width="400" height="45" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="initial" value="" style="ellipse;html=1;aspect=fixed;fillColor=#333333;strokeColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="105" y="275" width="22" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="available" value="Available&#xa;Can be selected and reserved" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=17;fontStyle=1;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="215" y="235" width="220" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="booked" value="Booked&#xa;Temporarily held in a customer's cart" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=17;fontStyle=1;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="545" y="235" width="245" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="sold" value="Sold&#xa;Payment succeeded; ticket issued" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=17;fontStyle=1;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="850" y="235" width="220" height="100" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="initial-available" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#333333;strokeWidth=2;" edge="1" parent="1" source="initial" target="available">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="available-booked" value="Customer adds seat to cart / reservation created" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#666666;fontSize=13;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="available" target="booked">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="490" y="180"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="booked-sold" value="Payment succeeds" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#666666;fontSize=13;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="booked" target="sold">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="820" y="180"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="booked-available" value="Removed from cart, reservation expires, or payment fails" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#666666;fontSize=13;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="booked" target="available">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="490" y="420"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sold-available" value="Cancellation accepted and seat released for resale" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#666666;fontSize=13;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="sold" target="available">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="960" y="490"/>
+              <mxPoint x="325" y="490"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="note" value="Only one customer can hold a seat at a time. A booking is temporary; a sale is confirmed only after successful payment." style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;size=15;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=14;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="330" y="535" width="480" height="75" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
