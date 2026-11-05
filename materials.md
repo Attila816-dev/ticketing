@@ -26,6 +26,7 @@ Domain Vocabulary:
 
 ## Task 1: High-Level System Components
 
+![High-Level System Components Diagram](./images/03-system-components.png)
 [Open the editable system components diagram in draw.io](./images/03-system-components.drawio)
 
 The customer UI supports event search, seat availability, cart management, and purchases. The event manager UI supports venue and event administration, including manifests and offers. The ASP.NET Core API exposes these capabilities through application services, applies authentication and role-based authorization, and persists ticketing data in SQL Server. Payment and notification providers are external integrations; the system should confirm a successful payment before issuing tickets.
@@ -36,12 +37,14 @@ The customer UI supports event search, seat availability, cart management, and p
 
 ## Task 2: Seat State Machine
 
+![Seat Sate Machine](./images/04-seat-state-machine.png) 
 [Open the editable seat state machine in draw.io](./images/04-seat-state-machine.drawio)
 
 The diagram shows the lifecycle of one seat. It starts as **Available**. When a customer adds it to their cart, the system temporarily reserves it as **Booked** so another customer cannot buy it at the same time. If the customer removes it, the reservation expires, or payment fails, it returns to **Available**. Successful payment changes it to **Sold**. A sold seat returns to **Available** only if a cancellation is accepted and the seat is released for resale.
 
 ## Task 3: Buying the Lowest-Priced Available Seat
 
+![Lowest-Priced Seat Sequence Diagram](./images/05-buy-lowest-priced-seat-sequence.png)
 [Open the editable purchase sequence diagram in draw.io](./images/05-buy-lowest-priced-seat-sequence.drawio)
 
 The customer asks for the cheapest available seat for an event. The system compares available seats and their active offer prices, then attempts to reserve the lowest-priced option before presenting it. If the customer confirms, payment is processed and a ticket is issued after successful payment. If another customer reserves the seat first, the system should search again; if payment fails, it releases the temporary reservation.
